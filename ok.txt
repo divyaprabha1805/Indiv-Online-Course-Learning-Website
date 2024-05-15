@@ -1,0 +1,12 @@
+<htmL>
+<body>
+
+<iframe src="cow.html" frameborder="0">
+</iframe>
+<br/><br/>
+
+<iframe src="ch1.html" frameborder="0">
+</iframe>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+.i1,.i2,.i3{
+    background-color: purple;
+    font-size: 50px;
+    color: white;
+    border-radius: 10px;
+    border:2;
+}
+.fb{
+    display:grid;
+    grid-template-rows:100px 100px 100px 100px 100px 100px;
+    grid-template-columns:100px 100px 100px 100px 100px 100px;
+
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2,100px);/*(no.of.times,size)*/
+    grid-template-columns: repeat(auto-fit,100px);/*according to screen size*/
+    grid-template-columns: 100px minmax(100px,3fr) 1fr;
+
+
+    grid-auto-rows:100px;/*by default the size of the cell is 100px*/
+    grid-auto-flow:column;/*add new cell as column*/
+
+    grid-gap:1em;
+
+    grid-template-areas:
+    'header header'
+    'main aside'
+    'footer footer';/*pre-defined grid-area sizes*/
+
+    /*within the cell*/
+    justify-items: start;
+    align-items: end;
+
+    /*within the grid  /  both takes same value*/
+    justify-content:space-around ;
+    align-content:space-around ;
+}
+.i1{
+    grid-row:1/7;
+    grid-column: 1/7;
+}
+.i2{
+    /*grid-row:span 2;
+    grid-column:span 2;*/
+
+    grid-area: 2/4/4/6;
+    z-index:1;
+    background-color: black;
+}
+.i3{
+    grid-area:3/1/7/7;/*row start-col start-row end-col end*/
+    grid-area:3/1/-1/-1;
+    grid-area:header;
+}
+.i4{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}

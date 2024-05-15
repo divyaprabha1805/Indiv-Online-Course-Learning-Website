@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code and Output Display</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Code and Output Display</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Output</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <iframe srcdoc="<!DOCTYPE html>
+                    <html lang='en'>
+                    <head>
+                        <meta charset='UTF-8'>
+                        <title>HTML Code</title>
+                    </head>
+                    <body>
+                        <h2>This is HTML code</h2>
+                        <p>Hello, World!</p>
+                    </body>
+                    </html>" frameborder="0"></iframe>
+                </td>
+                <td>
+                    <iframe srcdoc="<!DOCTYPE html>
+                    <html lang='en'>
+                    <head>
+                        <meta charset='UTF-8'>
+                        <title>Output</title>
+                    </head>
+                    <body>
+                        <h2>This is the Output</h2>
+                        <p>Hello, World!</p>
+                    </body>
+                    </html>" frameborder="0"></iframe>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
