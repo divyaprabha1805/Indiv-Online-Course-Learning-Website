@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouTube Homepage</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color:#cc7fdf5f;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        border: 2px solid black; /* Border for the whole page */
+        padding: 10px; /* Padding for the whole page */
+    }
+    .playlist {
+        flex: 1 0 35%; /* 35% width for the playlist */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow-y: auto; /* Enable vertical scrolling */
+        max-height: 85vh; /* Limit height of playlist to 85% of viewport height */
+    }
+    .playlist-video {
+        display:flex;
+        margin:10px;
+        cursor: pointer; /* Add cursor pointer for clickable items */
+    }
+    .video {
+        flex: 1 0 60%; /* 60% width for the main video */
+        margin-right: 0px; /* spacing between main video and playlist */
+        margin-top: 10px;
+        border-right: 1px solid black; /* Right border for the main video */
+        padding-right: 10px; /* Padding for the main video */
+    }
+    .a{
+        color: white;
+        margin-bottom: 10px;
+    }
+    .navbar {
+        background-color: #333;
+        padding: 10px 0;
+        width: 63%;
+        display: block;
+        text-align: center;
+        font-family: "Roboto Condensed", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 5px;
+        border-radius: 5px;
+    }
+    .navbar a:hover {
+        background-color: #555;
+    }
+    .notes, .qna {
+        display: none;
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        margin-top: 10px;
+    }
+    .note-section {
+    display: flex;
+    flex-direction: row;
+ /* Adjust as needed */
+    }
+    .notes{
+        display:flex;
+      }
+
+      .notes h2{
+        font-family: "Noto Serif", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-variation-settings:
+        "wdth" 100;
+    }
+    .notes h3{
+        font-family: "Noto Serif", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-variation-settings:
+        "wdth" 100;
+    }
+    .note {
+  /* Optional styles for individual notes */
+    flex: 1;
+    margin-right: 20px; /* Adjust as needed */
+}
+#viewthing{
+    margin-left: 20px;
+}
+.alignment{
+    margin-left: 30px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.note-section {
+        display: flex;
+        justify-content: space-between;
+    }
+    .note-section > div {
+        flex: 1;
+    }
+    .qna {
+        background-color: white;
+        color: black;
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    .qna h2 {
+        color: black;
+        text-align: center;
+        font-family: "Merriweather", serif;
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    .question {
+        margin-bottom: 20px;
+    }
+
+    .question h3 {
+        color: black;
+        margin-bottom: 10px;
+    }
+
+    .question p {
+        color: black;
+        margin-bottom: 5px;
+    } 
+    .review {
+        background-color:#d27bda85;
+        padding: 20px;
+        margin-top: 20px;
+        text-align: center;
+        font-family: "Roboto Slab", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+
+    .review h2 {
+        margin-bottom: 20px;
+    }
+
+    .review-card {
+        background-color:#e0e0e0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin-bottom: 20px;
+        padding: 20px;
+        
+    }
+
+    .review-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .review-header img {
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .review-content {
+        font-style: italic;
+        display: none; /* Hide content by default */
+    }
+
+    .review-content.open {
+        display: block; /* Show content when open class is applied */
+    }
+    
+
+
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="video">
+        <iframe id="main-video" width="100%" height="99%" src="https://www.youtube.com/embed/qz0aGYrrlhU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="playlist" id="playlist">
+        <div class="playlist-video" onclick="changeVideo('https://www.youtube.com/embed/-USAeFpVf_A')">
+            <iframe width="30%" height="100" src="https://www.youtube.com/embed/-USAeFpVf_A" allowfullscreen></iframe>
+            <p><b>HTML Tutorial for Beginners<br>1) Creating the first web page<br></b>Indiv</p>
+        </div>
+        <!-- Add similar elements for other videos in the playlist -->
+        <div class="playlist-video" onclick="changeVideo('https://www.youtube.com/embed/i3GE-toQg-o')">
+            <iframe width="30%" height="100" src="https://www.youtube.com/embed/i3GE-toQg-o" allowfullscreen></iframe>
+            <p><b>HTML Tutorial for Beginners<br>2) Linebreaks, spacing, and Comments<br></b>Indiv</p>
+        </div>
+        
+        <div class="playlist-video" onclick="changeVideo('https://www.youtube.com/embed/09oErCBjVns')">
+            <iframe width="30%" height="100" src="https://www.youtube.com/embed/09oErCBjVns" allowfullscreen></iframe>
+            <p><b>HTML Tutorial for Beginners<br>3) Ordered and Unordered list<br></b>Indiv</p>
+        </div>
+        <div class="playlist-video" onclick="changeVideo('https://www.youtube.com/embed/wvR40su_XBM')">
+            <iframe width="30%" height="100" src="https://www.youtube.com/embed/wvR40su_XBM" allowfullscreen></iframe>
+            <p><b>HTML Tutorial for Beginners<br>4) Creating a Table<br></b>Indiv</p>
+        </div>
+        <div class="playlist-video" onclick="changeVideo('https://www.youtube.com/embed/U4UHoiK6Oo4')">
+            <iframe width="30%" height="100" src="https://www.youtube.com/embed/U4UHoiK6Oo4" allowfullscreen></iframe>
+            <p><b>HTML Tutorial for Beginners<br>5) Creating a web link<br></b>Indiv</p>
+        </div>
+        <div class="playlist-video" onclick="changeVideo('https://www.youtube.com/embed/bCt2FnyY7AE')">
+            <iframe width="30%" height="100" src="https://www.youtube.com/embed/bCt2FnyY7AE" allowfullscreen></iframe>
+            <p><b>HTML Tutorial for Beginners<br>6) Creating a link within the same webpage <br></b>Indiv</p>
+        </div>
+        <div class="playlist-video" onclick="changeVideo('https://www.youtube.com/embed/Zy4KJeVN7Gk')">
+            <iframe width="30%" height="100" src="https://www.youtube.com/embed/Zy4KJeVN7Gk" allowfullscreen></iframe>
+            <p><b>HTML Tutorial for Beginners<br>7) Adding an image to a webpage <br></b>Indiv</p>
+        </div>
+        <div class="playlist-video" onclick="changeVideo('https://www.youtube.com/embed/dM12ctixdT4')">
+            <iframe width="30%" height="100" src="https://www.youtube.com/embed/dM12ctixdT4" allowfullscreen></iframe>
+            <p><b>HTML Tutorial for Beginners<br>8) Resizing and Sizing<br></b>Indiv</p>
+        </div>
+    
+
+    </div>
+</div>
+        <!-- Playlist videos -->
+<div class="navbar">
+    <a href="#" onclick="toggleSection('notes')">Notes</a>
+    <a href="#" onclick="toggleSection('qna')">Q/A</a>
+    <a href="#" onclick="toggleSection('review')">Review</a>
+</div>
+
+<div class="notes" id="notes">
+    <div class="note-section">
+        <div>
+            <h3>Reference Books:</h3>
+            <div class="alignment">
+                <ul>
+                    <li><a href="https://www.w3schools.com/html/html_links.asp" style="color:#F9F6EE">HTML1</a></li>
+                    <li><a href="https://www.w3schools.com/html/html_links.asp" style="color:#F9F6EE">HTML2</a></li>
+                    <li><a href="https://www.w3schools.com/html/html_links.asp" style="color:#F9F6EE">HTML3</a></li>
+                    <li><a href="https://www.w3schools.com/html/html_links.asp" style="color:#F9F6EE">HTML4</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="alignment">
+            <h3>Timings</h3>
+            <ul>
+                <li>0:00-----welcome to your very first tutorial on</li>
+                <li>1:23-----first bullet point HTML stands for</li>
+                <li>1:50-----say wow what is that but it's actually</li>
+                <li>2:00-----as an example we'll be going over many</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="qna" id="qna">
+    <h2>Q/A</h2>
+    <div class="question">
+        <h3>Q: What is HTML?</h3>
+        <p>A: HTML stands for HyperText Markup Language. It is the standard markup language for creating web pages and web applications.</p>
+    </div><hr>
+    <div class="question">
+        <h3>Q: What are the basic elements of an HTML document?</h3>
+        <p>A: The basic elements of an HTML document include the &lt;html&gt;, &lt;head&gt;, and &lt;body&gt; elements, as well as various tags for content and formatting.</p>
+    </div><hr>
+    <!-- Add more questions and answers as needed -->
+</div>
+
+<div class="review" id="review">
+    <h2>Review</h2>
+    <div class="review-card" onclick="toggleReviewContent(this)">
+        <div class="review-header">
+            <img src="rohit.jpeg" alt="Reviewer Image">
+            <div>
+                <h3>Rohit</h3>
+                <p>Web Developer</p>
+            </div>
+        </div>
+        <div class="review-content">
+            <p>"This tutorial is amazing! It helped me understand HTML in a clear and concise way. Highly recommended!"</p>
+        </div>
+    </div>
+    <!-- Add more review cards as needed -->
+</div>
+<script src="notes.js"></script>
+<script src="review.js"></script>
+</body>
+</html>

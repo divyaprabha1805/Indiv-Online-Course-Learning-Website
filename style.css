@@ -1,0 +1,507 @@
+h1{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color:purple;
+}
+h2{
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 140px 0; 
+  
+}
+
+
+/* navbar css */
+.btn-outline-success:hover {
+  color:black; /* Set the text color to white */
+  background-color: #fff; /* Set the background color to white */
+  border-color: #f7acf3; /* Set the border color to the original color (green in this case) */
+
+}
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  animation: marquee 20s linear infinite;
+}
+
+.grid-item {
+  width: calc(20% - 8px); /* Adjusted width to 15% */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+}
+
+img {
+  display: block;
+  border-radius: 8px;
+}
+
+@keyframes marquee {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+
+/* navbar css end */
+
+
+
+
+/* contact css*/
+.image-container {
+  display: flex;
+  perspective: 1000px; /* Add perspective for 3D effect */
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  transition: transform 0.5s ease-in-out; /* Add flipping transition */
+  transform-style: preserve-3d; /* Maintain 3D transformations */
+}
+
+/* Apply flipping effect on hover */
+.image:hover {
+  transform: rotateY(180deg); /* Rotate around the Y-axis for flipping effect */
+}
+
+.contact{
+  display:flex;
+  justify-content: space-around;
+ 
+}
+iframe{
+  border-radius: 50px;
+}
+.details{
+  margin-bottom: 90px;
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust the alpha value for transparency */
+    padding: 20px; /* Adjust padding as needed */
+    margin: 20px; /* Adjust margin as needed */
+    border-radius: 20px;
+}
+input{
+        border-radius: 20px;
+        width:400px;
+        height:50px;
+}
+
+button[type="submit"]{
+  background-color: #8f73ff;
+  height:50px;
+  width:100px;
+  color: white;
+  border-color: white;
+  border-radius: 30px;
+}
+/* contact css end */
+
+
+
+
+.card {
+  min-width: 300px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+  transition: .5s;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.card:hover {
+  transform:scale(1.1);
+}
+.card_red, .card_red .title .fa {
+  background: linear-gradient(-45deg, #ffec61, #f321d7);
+}
+.card_violet, .card_violet .title .fa  {
+  background: linear-gradient(-45deg, #f403d1, #64b5f6);
+}
+.card_three, .card_three .title .fa  {
+  background: linear-gradient(-45deg, #24ff72, #9a4eff);
+}
+
+.card:before {
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: rgba(255, 255, 255, .1);
+  z-index: 1;
+  transform: skewY(-5deg) scale(1.5);
+}
+
+.title .fa {
+  color: #fff;
+  font-size: 60px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+}
+.title h2 {
+  position: relative;
+  margin: 20px 0 0;
+  padding: 0;
+  color: #fff;
+  font-size: 28px;
+  z-index: 2;
+}
+.price {
+  position: relative;
+  z-index: 2;
+}
+.price h4 {
+  margin: 0;
+  padding: 20px 0;
+  color: #fff;
+  font-size: 60px;
+}
+.option {
+  position: relative;
+  z-index: 2;
+}
+.option ul {
+  margin: 0;
+  padding: 0;
+}
+.option ul li {
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+/*summa*/
+body {
+	background: linear-gradient(90deg, #C7C5F4, #776BCC);		
+padding-top: 56px; /* Adjust this value based on the navbar height */
+color:white;
+}
+
+
+  .navbar {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+.grayscale {
+filter: grayscale(100%);
+}
+
+.card-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+margin-top: 20px; /* Adjust the value for space */
+}
+
+.card {
+width: 18rem;
+margin-bottom: 20px;
+}
+
+.carousel {
+margin-bottom: 300px; /* Adjust the value for space */
+margin-top: 50px;
+}
+nav{
+  margin-bottom: 30px;
+}
+
+#courses {
+  text-align: center;
+  max-width: 600px; /* Adjust the value based on your design */
+  margin: 0 auto;
+}
+.pricing-container {
+padding: 40px 0;
+color:white;
+margin-top: 400px;
+background-color:rgba(255, 255, 255, 0.496);
+}
+
+.pricing-heading {
+text-align: center;
+margin-bottom: 20px;
+}
+
+.pricing-subheading {
+text-align: center;
+margin-bottom: 40px;
+color: #6c757d;
+}
+
+/* Add this at the end of your existing CSS in style.css */
+
+@media (max-width: 768px) {
+  /* Adjust the styling for smaller screens */
+
+  .card-container {
+    justify-content: center; /* Center the cards on smaller screens */
+  }
+
+  .pricing-container {
+    margin-top: 20px; /* Adjust the top margin for the payment section on smaller screens */
+  }
+}
+
+
+
+/*contact*/
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+  border-radius: 10px;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+
+/*footer*/
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+/*alignment*/
+/* Default styles for larger screens */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.pricing-container {
+  margin-top: 50px;
+  flex-wrap: wrap;
+
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-container {
+    margin-top: 20px;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+/* Add this at the end of your existing CSS */
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-container {
+    margin-top: 20px;
+    flex-direction: column; /* Change to column layout for smaller screens */
+    align-items: center;
+  }
+
+  /* Additional styles for contact and payment sections */
+  .container {
+    padding: 20px; /* Adjust padding for smaller screens */
+    margin-top: 50px;
+  }
+
+  .column {
+    width: 100%; /* Full width for columns on smaller screens */
+  }
+
+  .footer {
+    margin: 20px; /* Adjust margin for the footer on smaller screens */
+  }
+
+  
