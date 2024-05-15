@@ -1,0 +1,47 @@
+{
+    "questions": [
+      {
+        "question": "What does HTML stand for?",
+        "options": ["Hyper Text Markup Language", "Hyperlinks and Text Markup Language", "Home Tool Markup Language", "Hyper Text Markdown Language"],
+        "correctAnswer": "Hyper Text Markup Language"
+      },
+      {
+        "question": "Which of the following is a programming language?",
+        "options": ["HTML", "CSS", "JavaScript", "XML"],
+        "correctAnswer": "JavaScript"
+      },
+      {
+        "question": "What does CSS stand for?",
+        "options": ["Cascading Style Sheets", "Creative Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"],
+        "correctAnswer": "Cascading Style Sheets"
+      },
+      {
+        "question": "What is the purpose of JavaScript?",
+        "options": ["Styling web pages", "Creating interactive web pages", "Defining web page structure", "Managing databases"],
+        "correctAnswer": "Creating interactive web pages"
+      },
+      {
+        "question": "Which of the following is NOT a JavaScript framework or library?",
+        "options": ["React", "Vue", "Bootstrap", "jQuery"],
+        "correctAnswer": "Bootstrap"
+      },
+      {
+        "question": "What is the purpose of the <head> element in HTML?",
+        "options": ["To define the main content of the document", "To display content on the web page", "To link external resources", "To define page sections"],
+        "correctAnswer": "To link external resources"
+      },
+      {
+        "question": "Which CSS property is used to change the text color of an element?",
+        "options": ["font-color", "color", "text-color", "text-style"],
+        "correctAnswer": "color"
+      },
+      
+      {
+        "question": "Which of the following is NOT a valid CSS unit of measurement?",
+        "options": ["px", "em", "pt", "in"],
+        "correctAnswer": "in"
+      }
+     
+    ]
+  }
+  

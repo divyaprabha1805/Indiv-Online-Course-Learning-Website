@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login and Registration Form</title>
+<link rel="stylesheet" href="login.css">
+<style>
+/* Your additional CSS styles */
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+.wrapper {
+    overflow: hidden;
+    max-width: 390px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container form {
+    display: none;
+}
+
+.form-container .active {
+    display: block;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: -webkit-linear-gradient(right, #a445b2, #fa42f4,#662d91, #d726ae);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.button-container button.active {
+    background-color: #f637e0; /* Adjust the color as needed */
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="title-text">
+        <div class="title login active" onclick="showForm('login')">
+            Login Form
+        </div>
+        <div class="title signup" onclick="showForm('signup')">
+            Signup Form
+        </div>
+    </div>
+    <div class="form-container">
+        <div class="button-container">
+            <button class="login active" onclick="showForm('login')">Login</button>
+            <button class="signup" onclick="showForm('signup')">Signup</button>
+        </div>
+        <div class="form-inner">
+            <form action="login1.php" onsubmit="return validateLoginForm() && redirectToPage('html2.html');" class="login active">
+                <div class="field">
+                    <input type="text" id="loginEmail" name="lemail" placeholder="Email Address" required>
+                    <span id="loginEmailError" class="error"></span>
+                </div>
+                <div class="field">
+                    <input type="password" id="loginPassword" name="lpassword" placeholder="Password" required>
+                    <span id="loginPasswordError" class="error"></span><br>
+                </div><br>
+                <div class="pass-link">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Login">
+                </div>
+                <div class="signup-link">
+                    Not a member? <a href="#" onclick="showForm('signup')">Signup now</a>
+                </div>
+            </form>
+            <form action="signup.php" onsubmit="return validateSignupForm() && redirectToPage('html2.html');" class="signup">
+                <div class="field">
+                    <input type="text" id="signupEmail" name="email" placeholder="Email Address" required>
+                    <span id="signupEmailError" class="error"></span>
+                </div>
+                <div class="field">
+                    <input type="password" id="signupPassword" name="password" placeholder="Password" required>
+                    <span id="signupPasswordError" class="error"></span>
+                </div>
+                <div class="field">
+                    <input type="password" id="confirmPassword" name="cpassword" placeholder="Confirm password" required>
+                    <span id="confirmPasswordError" class="error"></span>
+                </div>
+                <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Signup">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+function showForm(formName) {
+    const forms = document.querySelectorAll('.form-inner form');
+    const titles = document.querySelectorAll('.title');
+
+    forms.forEach(form => {
+        if (form.classList.contains(formName)) {
+            form.classList.add('active');
+        } else {
+            form.classList.remove('active');
+        }
+    });
+
+    titles.forEach(title => {
+        if (title.classList.contains(formName)) {
+            title.classList.add('active');
+        } else {
+            title.classList.remove('active');
+        }
+    });
+}
+
+function validateLoginForm() {
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+    const emailError = document.getElementById('loginEmailError');
+    const passwordError = document.getElementById('loginPasswordError');
+
+    // Reset errors
+    emailError.textContent = '';
+    passwordError.textContent = '';
+
+    // Basic email validation
+    if (!email || !email.includes('@')) {
+        emailError.textContent = 'Please enter a valid email address';
+        return false;
+    }
+
+    // Basic password validation
+    if (password.length < 6) {
+        passwordError.textContent = 'Password must be at least 6 characters long';
+        return false;
+    }
+
+    return true;
+}
+
+function validateSignupForm() {
+    const email = document.getElementById('signupEmail').value;
+    const password = document.getElementById('signupPassword').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    const emailError = document.getElementById('signupEmailError');
+    const passwordError = document.getElementById('signupPasswordError');
+    const confirmPasswordError = document.getElementById('confirmPasswordError');
+
+    // Reset errors
+    emailError.textContent = '';
+    passwordError.textContent = '';
+    confirmPasswordError.textContent = '';
+
+    // Basic email validation
+    if (!email || !email.includes('@')) {
+        emailError.textContent = 'Please enter a valid email address';
+        return false;
+    }
+
+    // Basic password validation
+    if (password.length < 6) {
+        passwordError.textContent = 'Password must be at least 6 characters long';
+        return false;
+    }
+
+    // Confirm password validation
+    if (password !== confirmPassword) {
+        confirmPasswordError.textContent = 'Passwords do not match';
+        return false;
+    }
+
+    return true;
+}
+
+function redirectToPage(page) {
+    window.location.href = page;
+    return false; // Prevent form submission
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="cssf/style.css">
+
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!--FOOTER LINK-->
+    <link rel="stylesheet" href="cssf/fstyle.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+      .error {
+          color: red;
+          font-size: 12px;
+      }
+      </style>
+  
+  </head>
+
+
+  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+
+    <!-- nav bar -->    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+      <div class="container-fluid">
+        <img src="image/logo2.png" height="80" width="100">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#carouselExample">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#courses">Courses</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          My Space
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                          <li><a class="dropdown-item" href="placement.html">placement Guide</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#package">Packages</a>
+                  </li>
+                 
+                  
+              </ul>
+              <form class="d-flex">
+                <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit" onclick="search(event)">Search</button>
+
+
+              </form>
+          </div>
+      </div>
+  </nav>
+      <!-- end of nav bar -->    
+      <!-- <div style="text-align: center;">
+        <img src="image/logo2.png" height="200" width="400" style="text-align: center;">
+    </div> -->
+
+    <div class="image-grid">
+      <div class="grid-item"><img src="image/html.jpg" alt="Image 1"></div>
+      <div class="grid-item"><img src="image/css1.png" alt="Image 2"></div>
+      <div class="grid-item"><img src="image/fb.png" alt="Image 3"></div>
+      <div class="grid-item"><img src="image/dj.jpg" alt="Image 1"></div>
+      <div class="grid-item"><img src="image/js1.jpg" alt="Image 2"></div>
+      <div class="grid-item"><img src="image/php.jpg" alt="Image 3"></div>
+      <div class="grid-item"><img src="image/py.png" alt="Image 1"></div>
+      <div class="grid-item"><img src="image/sass.png" alt="Image 2"></div>
+      
+  </div>
+    
+    <h2>Welcome to the new environment specially created for you to widen your knowledge and provide you with full support and guide till you get your placement.</h2>
+   <!--CAROUSEL START-->
+   <div id="carouselExample" class="carousel slide component">
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <div class="d-block w-100 grayscale" style="background-image: url('https://source.unsplash.com/800x400/?education'); height:700px; background-size: cover;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Explore a World of Knowledge</h5>
+            <p>Unlock new opportunities with our online learning platform.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-block w-100 grayscale" style="background-image: url('https://source.unsplash.com/800x400/?study'); height: 700px; background-size: cover;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Learn at Your Own Pace</h5>
+            <p>Flexible courses designed to fit your schedule and lifestyle.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item active">
+        <div class="d-block w-100 grayscale" style="background-image: url('https://source.unsplash.com/800x400/?career'); height: 700px; background-size: cover;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Stay Ahead in Your Career</h5>
+            <p>Acquire skills that set you apart in the competitive job market.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<!-- CAROUSEL END -->
+
+
+    <!--COURSES START-->
+    <div class="w3-content w3-container w3-padding-64" id="courses">
+      <h3 class="w3-center">COURSES FOR YOU!</h3>
+      <p class="w3-center"><em>Here are some of my latest courses suggested for you<br> Click on the courses to view more details</em></p><br>
+    </div>
+    <section class="card-container">
+
+          <!-- Course 1 -->
+          <div class="card component" id="HTML">
+            <a href="courses/course1.html" target="_blank">
+                <img src="image/html.jpg" class="bd-placeholder-img card-img-top" alt="Course 1">
+            </a>
+            <div class="card-body">
+                <p class="card-text">Learn the basics of HTML for web development.</p>
+            </div>
+        </div>
+    
+
+          <!-- Course 2 -->
+          <div class="card component" id="CSS">
+            <a href="courses/course2.html" target="_blank">
+                <img src="image/css1.png" class="bd-placeholder-img card-img-top" alt="Course 1">
+            </a>
+            <div class="card-body">
+                <p class="card-text">Learn the basics of CSS with advanced concepts like grid, layout and flexbox for web development.</p>
+            </div>
+        </div>
+           <!-- Course 3 -->
+           <div class="card component" id="Javascript">
+            <a href="courses/course3.html" target="_blank">
+                <img src="image/js1.jpg" class="bd-placeholder-img card-img-top" alt="Course 1">
+            </a>
+            <div class="card-body">
+                <p class="card-text">Learn javascript fully with all concepts for full stack web development.</p>
+            </div>
+        </div>
+
+          <!-- Course 4-->
+          <div class="card component" id="PHP">
+            <a href="courses/course4.html" target="_blank">
+                <img src="image/php.jpg" class="bd-placeholder-img card-img-top" alt="Course 1">
+            </a>
+            <div class="card-body">
+                <p class="card-text">Learn the use of php to store your database with easy backend work.</p>
+            </div>
+        </div>
+           <!-- Course 5-->
+           <div class="card component" id="Django">
+            <a href="courses/course5.html" target="_blank">
+                <img src="image/dj.jpg" class="bd-placeholder-img card-img-top" alt="Course 1">
+            </a>
+            <div class="card-body">
+                <p class="card-text">Learn the basics of Django for full stack web development with this effective framework.</p>
+            </div>
+        </div>
+
+          <!-- Course 6 -->
+          <div class="card component" id="Sass">
+            <a href="courses/course6.html" target="_blank">
+                <img src="image/sass.png" class="bd-placeholder-img card-img-top" alt="Course 1">
+            </a>
+            <div class="card-body">
+                <p class="card-text">Learn the concept of Sass which is the advanced version of CSS which makes your work easier.</p>
+            </div>
+        </div>
+           <!-- Course 7 -->
+           <div class="card component" id="Pycharm">
+            <a href="courses/course7.html" target="_blank">
+                <img src="image/py.png" class="bd-placeholder-img card-img-top" alt="Course 1">
+            </a>
+            <div class="card-body">
+                <p class="card-text">Learn the basics of pycharm and how to use it effectivly.</p>
+            </div>
+        </div>
+
+          <!-- Course 8 -->
+          <div class="card component" id="Tkinter">
+            <a href="courses/course8.html" target="_blank">
+                <img src="image/tk.png" class="bd-placeholder-img card-img-top" alt="Course 1">
+            </a>
+            <div class="card-body">
+                <p class="card-text">Learn python tkinter an easy UI tool for static web pages.</p>
+            </div>
+        </div>
+
+          <!-- Course 9 -->
+          <div class="card component" id="firebase">
+            <a href="courses/course9.html" target="_blank">
+                <img src="image/fb.png" class="bd-placeholder-img card-img-top" alt="Course 1">
+            </a>
+            <div class="card-body">
+                <p class="card-text">Learn how to use firebase to do backend work for your websites.</p>
+            </div>
+        </div>
+           <!-- Course 10 -->
+           <div class="card component" id="fullstack">
+            <a href="courses/course10.html" target="_blank">
+                <img src="image/full.png" class="bd-placeholder-img card-img-top" alt="Course 1">
+            </a>
+            <div class="card-body">
+                <p class="card-text">Full guide to become a full stack web developer.</p>
+            </div>
+        </div>
+          
+          
+    </section>
+  
+  
+  
+    
+
+    <!--contact start-->
+<!--contact start-->
+<h2><i>CONTACT US</i></h2><br>
+<div class="image-container">
+  <img class="image" src="image/i1.jpg" alt="Image 1">
+  <img class="image" src="image/i2.jpg" alt="Image 2">
+  <img class="image" src="image/i3.jpg" alt="Image 3">
+  <img class="image" src="image/i4.jpg" alt="Image 1">
+  <img class="image" src="image/i5.jpg" alt="Image 2">
+  <img class="image" src="image/i6.jpg" alt="Image 3">
+  <img class="image" src="image/i9.jpg" alt="Image 1">
+  
+</div>
+<section class="contact" id="contact">
+  
+    
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.2202192619467!2d76.989621514815!3d11.046185091861681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8f9c16e65b7b5%3A0x4264c8f73e0e07d8!2sPSG%20College%20of%20Technology!5e0!3m2!1sen!2sin!4v1646399726962!5m2!1sen!2sin" width="400" height="430" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  <div class="details">
+    <form action="contact.php" onsubmit="return validateForm()" method="POST">        <label>Name:</label>
+        <input type="text" id="name" name="cname" placeholder="Your name"><br>
+        <span id="nameError" class="error"></span><br>
+        <label>Email:</label><br>
+        <input type="text" id="email" name="cemail" placeholder="Email address"><br>
+        <span id="emailError" class="error"></span><br>
+        <label>Contact:</label>
+        <textarea id="message" rows="1" cols="30" name="cfeed" placeholder="Write your feedback"></textarea>
+        <span id="feedbackError" class="error"></span><br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<script>
+    function validateForm() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const feedback=document.getElementById("message").value;
+        const feedbackError=document.getElementById("feedbackError");
+        
+        nameError.textContent = "";
+        emailError.textContent = "";
+
+        let valid = true;
+
+        if (!/^[A-Za-z]+$/.test(name)) {
+            nameError.textContent = "Name must contain only characters";
+            valid = false;
+        }
+
+        if (!/^\S+@\S+\.\S+$/.test(email)) {
+            emailError.textContent = "Invalid email address";
+            valid = false;
+        }
+
+        if (feedback==""){
+          feedbackError.textContent="Required";
+          valid=false;
+        }
+        else{
+          feedbackError.textContent="";
+        }
+
+        return valid;
+    }
+</script>
+
+</section>
+
+
+
+
+
+<!--contact end-->
+    <!--Payment section start-->
+    <section class="pricing-container" id="package">
+      <div class="pricing-heading">
+        <h2>Course Packages</h2>
+      </div>
+      <div class="pricing-subheading">
+        <p>Choose the perfect plan for you and get started today</p>
+      </div>
+
+
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="card card_red text-center">
+                <div class="title">
+                  <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                  <h2>Basic</h2>
+                </div>
+                <div class="price">
+                  <h4><sup>$</sup>25</h4>
+                </div>
+                <div class="option">
+                  <ul>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>1 month</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>3 Courses</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>No certificates</li>
+                    <li><i class="fa fa-times" aria-hidden="true"></i>Live Support</li>
+                    </ul>
+                </div>
+                <a href="pay.html">Enroll Now</a>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card card_violet text-center">
+                <div class="title">
+                  <i class="fa fa-plane" aria-hidden="true"></i>
+                  <h2>Premium</h2>
+                </div>
+                <div class="price">
+                  <h4><sup>$</sup>50</h4>
+                </div>
+                <div class="option">
+                  <ul>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>3 months</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>Unlimited courses</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>With certificates</li>
+                    <li><i class="fa fa-times" aria-hidden="true"></i>Live Support</li>
+                    </ul>
+                </div>
+                <a href="pay.html">Enroll Now</a>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card card_three text-center">
+                <div class="title">
+                  <i class="fa fa-rocket" aria-hidden="true"></i>
+                  <h2>Standard</h2>
+                </div>
+                <div class="price">
+                  <h4><sup>$</sup>40</h4>
+                </div>
+                <div class="option">
+                  <ul>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>1.5 months</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>7 courses</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>With certificates</li>
+                    <li><i class="fa fa-times" aria-hidden="true"></i>Live Support</li>
+                    </ul>
+                </div>
+                <a href="pay.html">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Payment section end-->
+
+<!--Footer start-->
+<footer class="footer" >
+  <div class="container" style="background-color: #9386f7ea; color:aliceblue">
+    <div class="row">
+      <div class="footer-col">
+        <h4>Collaboratives</h4>
+        <ul>
+          <li><a href="#">Google</a></li>
+          <li><a href="#">Wipro</a></li>
+          <li><a href="#">Microsoft</a></li>
+          <li><a href="#">KLA</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sponsors</h4>
+        <ul>
+          <li><a href="#">Stellar Supporters</a></li>
+          <li><a href="#">Premier Patrons</a></li>
+          <li><a href="#">Ultimate Allies</a></li>
+          <li><a href="#">Prime Partnerships</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact us</h4>
+        <ul>
+          <li><a href="#">South street</a></li>
+          <li><a href="#">Coimbatore</a></li>
+          <li><a href="#">Ph no:9876543200</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--Footer start-->
+<script>
+  function search(event) {
+    event.preventDefault(); // Prevent form submission
+    const searchInput = document.getElementById('searchInput');
+    const searchTerm = searchInput.value.toLowerCase();
+    const courses = document.querySelectorAll('.card.component');
+
+    courses.forEach(course => {
+        if (course.id.toLowerCase().includes(searchTerm)) {
+            course.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            course.style.backgroundColor = '#9370DB'; // Highlight the course
+        } else {
+            course.style.backgroundColor = ''; // Remove highlight from other courses
+        }
+    });
+}
+
+
+</script>
+  </body>
+</html>

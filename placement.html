@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Placement Guide</title>
+    </head>
+    <style>
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+        .main-container {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .main {
+            flex: 0 0 auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background: linear-gradient(to right, purple, rgb(103, 46, 182));
+        }
+        .content {
+            border: 2px solid white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            padding: 20px;
+            width: 300px;
+            border-radius: 30px;
+        }
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 30px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        #prev {
+            left: 10px;
+        }
+        #next {
+            right: 10px;
+        }
+    </style>
+    <style>
+        .heading{
+            align-items: center;
+        }
+        @keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.webcom {
+    display: flex;
+    margin: 50px;
+    justify-content: space-between;
+    height: 500px;
+    border-radius: 30px;
+    overflow: hidden; /* Ensure overflow is hidden for smooth transition */
+    animation: slideInRight 4s ease; /* Use the updated slideInRight animation */
+}
+
+.webcon {
+    display: flex;
+    margin: 50px;
+    justify-content: space-between;
+    height: 500px;
+    border-radius: 30px;
+    overflow: hidden; /* Ensure overflow is hidden for smooth transition */
+    animation: slideIn 4s ease; /* Apply the animation to each .webcon container */
+}
+
+img {
+    border-radius: 30px;
+    transition: border-radius 0.3s ease; /* Add transition for border-radius */
+    height: 400px;
+    width: 400px;
+}
+
+img:hover {
+    border-radius: 0; /* Adjust as needed */
+}
+
+        img {
+            border-radius: 30px;
+            transition: border-radius 0.3s ease, transform 0.5s ease; /* Add transform property for flipping effect */
+            margin: 50px;
+            height: 400px;
+            width: 400px;
+        }
+
+        img:hover {
+            border-radius: 0; /* Adjust as needed */
+            transform: rotateY(180deg); /* Flipping effect on hover */
+        }
+
+        body{
+            background-color: rgba(0, 0, 0, 0.811);
+            color:white;
+            justify-content: space-around;
+            font-size: 30px;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        button {
+            background-color: rgb(187, 156, 216); /* Violet color */
+            color: #fff; /* White text color */
+            padding: 10px 20px; /* Adjust padding as needed */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Adding transitions */
+
+        }
+
+        button:hover {
+            background-color: #cec0d4; /* Darker violet color on hover */
+            color: #fff; /* White text color on hover */
+        }
+        .sub{
+            width:600px;
+            margin: 50px;
+        }
+        
+    </style>
+    <body>
+        <div class="carousel">
+            <div class="carousel-arrow" id="prev">&lt;</div>
+            <div class="carousel-arrow" id="next">&gt;</div>
+            <div class="main-container">
+                <div class="main">
+                    <div class="content">
+                        <h2>Hi! I am Kitty!</h2>
+                        <p>I am here to help you get your dream job. Getting placed in a good company is hard but not impossible.</p>
+                    </div>
+                    <img src="kit1.gif" alt="">
+                </div>
+                <div class="main">
+                    <div class="content">
+                        <h2>Feeling Sad?</h2>
+                        <p>No worries! We have best our mentors to support you throughout your journey of learning.</p>
+                    </div>
+                    <img src="kit2.gif" alt="">
+                </div>
+                <div class="main">
+                    <div class="content">
+                        <h2>Hi! I am Kitty!</h2>
+                        <p>I am here to help you get your dream job. Getting placed in a good company is hard but not impossible.</p>
+                    </div>
+                    <img src="kit3.gif" alt="">
+                </div>
+            </div>
+        </div>
+    
+        <div class="heading" align="center">
+            <h1>Placement Guide</h1>
+            <h5>“Don't confuse having a career with having a life.” – Hillary Clinton. </h5>
+        </div>
+      
+        <div class="webcon" style="background-color: rgb(138, 43, 226);">
+            <img src="pimg/i2.jpg" alt="">
+            <div class="sub">
+                <p>Front-end development is the development of visual and interactive elements of a website that users interact with directly. It's a combination of HTML, CSS and JavaScript, where HTML provides the structure, CSS the styling and layout, and JavaScript the dynamic behaviour and interactivity.</p>
+                <button onclick="rediretToPage('road1')"> Skill Up -></button>
+            </div>
+           
+        </div>
+        <div class="webcom" style="background-color: rgb(181, 129, 229);">
+            <div class="sub">
+                <p>The back end refers to parts of a computer application or a program's code that allow it to operate and that cannot be accessed by a user. Most data and operating syntax are stored and accessed in the back end of a computer system. Typically the code is comprised of one or more programming languages.</p>
+                <button onclick="rediretToPage('road2')"> Skill Up -></button>
+            </div>
+           
+
+            <img src="pimg/i3.jpg" alt="">
+        </div>
+        <div class="webcon" style="background-color: blueviolet;">
+            <img src="pimg/i4.jpg" alt="">
+            <div class="sub">
+                <p>A full-stack developer is a developer or engineer who can build both the front end and the back end of a website. The front end (the parts of a website a user sees and interacts with) and the back end (the behind-the-scenes data storage and processing) require different skill sets.</p>
+                <button onclick="rediretToPage('road3')"> Skill Up -></button>
+            </div>
+           
+        </div>
+        <div class="webcom" style="background-color: rgb(181, 129, 229);">
+            <div class="sub">
+                <p>What is AI and data science?
+                    In simple terms, data science focuses on the process of extracting, cleaning, and analyzing data to gain valuable insights, in contrast, AI involves creating intelligent systems that can carry out tasks autonomously, learn from their experiences, and enhance their performance as they gain more knowledge over time.</p>
+                <button onclick="rediretToPage('road4')"> Skill Up -></button>
+
+            </div>
+          
+            <img src="pimg/i5.jpg" alt="">
+
+        </div>
+        <div class="webcon" style="background-color: blueviolet;">
+            <img src="pimg/i6.jpg" alt="">
+            <div class="sub">
+                <p>A UX designer seeks to make products and services easy, effective, and delightful to use, and having a good UX design can make the difference between a product's or service's success and failure. The term user experience (UX) refers to all aspects of this interaction.</p>
+                <button onclick="rediretToPage('road5')"> Skill Up -></button>    
+            </div>
+       
+        </div>
+        <div class="webcom" style="background-color: rgb(181, 129, 229);">
+            <div class="sub">
+                <p>Game developers typically play a role in several elements of game development, including visuals, artificial intelligence, user interface, and game logic. Game developers take the game designers' designs, storyboards, and ideas and use them as blueprints to bring the game to life as something gamers can actually play.</p>
+                <button onclick="rediretToPage('road6')"> Skill Up -></button>
+            </div>
+            <img src="pimg/i7.jpg" alt="">
+        </div>
+
+
+        <script>
+            function rediretToPage(page)
+            {
+                window.location.href = "roads/"+ page +".html";
+            }
+            const prevBtn = document.getElementById('prev');
+                const nextBtn = document.getElementById('next');
+                const mainContainer = document.querySelector('.main-container');
+                const mainItems = document.querySelectorAll('.main');
+        
+                let currentIndex = 0;
+        
+                function updateCarousel() {
+                    const offset = -currentIndex * mainItems[0].offsetWidth;
+                    mainContainer.style.transform = `translateX(${offset}px)`;
+                }
+        
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex === 0) ? mainItems.length - 1 : currentIndex - 1;
+                    updateCarousel();
+                });
+        
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex === mainItems.length - 1) ? 0 : currentIndex + 1;
+                    updateCarousel();
+                });
+        </script>
+            
+    </body>
+</html>

@@ -1,0 +1,222 @@
+.image-container {
+  display: flex;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.image-container img {
+  margin:50px;
+  border-radius: 50px;
+  width: 500px;
+  height: 300px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.image-container img:not(:first-child) {
+  opacity: 0;
+}
+
+.image-container:hover img {
+  opacity: 0.7;
+}
+
+.image-container:hover img:hover {
+  opacity: 1;
+}
+
+
+/* org */
+.gif img{
+    height: 400px;
+    width:400px;
+    border-radius: 300px;
+    margin-top: 50px;
+}
+
+body {
+  background-image: url('bg3.jpg');
+  background-size: cover;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.accordion {
+  max-width: 90%;
+  margin: auto;
+  border-radius: 5px; 
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  background-color: rgb(14, 14, 14); /* Set the background color for the accordion */
+  color:rgb(250, 139, 250);
+}
+
+.accordion-button {
+  background-color: rgb(255, 249, 255); /* Set button background color */
+  color: black;
+}
+
+.accordion-button:hover {
+  background-color: #b00eb0; /* Change button color on hover */
+}
+
+.accordion-collapse {
+  border: 1px solid rgb(163, 18, 163); /* Add border for a clean separation */
+  border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+}
+
+.accordion-body {
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .res {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+
+      .res {
+          margin-top: 10px;
+          justify-content: space-around;
+          flex-wrap: wrap;
+      }
+
+      .cards {
+          margin: 10px;
+          border: 2px solid white;
+          border-radius: 10px;
+      }
+
+      .accordion {
+          max-width: 70%;
+          margin: auto;
+      }
+
+      .center-image {
+          flex: 1;
+          display: flex;
+          align-items: center;
+      }
+
+      .center-image img {
+          width: 100%;
+          height: auto;
+      }
+
+      .navbar {
+          position: fixed;
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: 0;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+          color: white;
+          z-index: 1;
+      }
+
+      .navbar a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 18px;
+          color: white;
+          display: block;
+          transition: 0.3s;
+      }
+
+      .navbar a:hover {
+          color: #f1f1f1;
+      }
+
+      .navbar .closebtn {
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 16px;
+      }
+
+      #main {
+          transition: margin-right 0.5s;
+          padding: 16px;
+      }
+
+      .accordion {
+          max-width: 90%;
+          margin: auto;
+      }
+
+      .accordion-item {
+          margin-bottom: 10px;
+      }
+
+      @media (max-width: 768px) {
+          .res {
+              flex-direction: column;
+              align-items: center;
+          }
+      }
+      .allinc{
+        justify-content: space-around;
+      }
+.detcon{
+  display: flex;
+  justify-content: space-around;
+  margin: 50px;
+}
+iframe{
+  border-radius: 20px;
+  margin-top: 50px;
+}
+.card-body{
+  text-align: center;
+}
+
+
+.detcon {
+  flex: 1;
+  margin: 100px;
+  height: 500px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+}
+
+
+
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.quiz{
+  background-color: #b00eb0;
+  color:white;
+  width:200px;
+  height:50px;
+  border-radius: 10px;
+  margin:10px;
+  font-size: 30px;
+  font-weight: bold;
+}
