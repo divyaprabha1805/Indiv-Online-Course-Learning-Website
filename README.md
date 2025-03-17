@@ -1,13 +1,15 @@
-PROJECT OVERVIEW-
-PART:1
-![Demo](https://github.com/divyaprabha1805/Indiv-Online-Course-Learning-Website/blob/main/indiv_part1.gif)
-PART:2
-![Demo](https://github.com/divyaprabha1805/Indiv-Online-Course-Learning-Website/blob/main/indiv_part-2.gif)
 # Indiv Online Course Learning Website
 
 Indiv Online Course Learning Website
 
 Welcome to the Indiv Online Course Learning Website project! This platform is designed to provide users with a seamless online learning experience, allowing them to access various courses and resources.
+
+PROJECT OVERVIEW-
+PART:1
+![Demo](https://github.com/divyaprabha1805/Indiv-Online-Course-Learning-Website/blob/main/indiv_part1.gif)
+PART:2
+![Demo](https://github.com/divyaprabha1805/Indiv-Online-Course-Learning-Website/blob/main/indiv_part-2.gif)
+
 Table of Contents
 
     Features
@@ -15,7 +17,6 @@ Table of Contents
     Installation
     Usage
     Contributing
-    License
 
 Features
 
