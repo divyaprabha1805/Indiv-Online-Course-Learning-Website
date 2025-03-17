@@ -86,10 +86,3 @@ bash
 
     Open a pull request.
 
-License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-Thank you for checking out the Indiv Online Course Learning Website! We hope you find it useful and engaging. Happy learning!
-
-
