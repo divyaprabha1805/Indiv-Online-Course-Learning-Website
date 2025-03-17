@@ -23,6 +23,8 @@ Features
     Course browsing and enrollment
     Interactive course materials
     Progress tracking
+    placement related training like quiz,roadmap
+    Payment page
     Community forums for discussions
 
 Technologies Used
@@ -30,6 +32,7 @@ Technologies Used
     HTML
     CSS
     JavaScript
+    PHP
     [Your chosen backend technology (e.g., Node.js, Python, etc.)]
     [Any databases used (e.g., MongoDB, MySQL, etc.)]
     [Any frameworks used (e.g., React, Express, etc.)]
